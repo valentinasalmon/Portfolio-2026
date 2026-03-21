@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Valentina Salmon — Ingeniería en Sistemas de Información, IA & Automatización, Corrientes, Argentina.">
+  <meta name="author" content="Valentina Salmon">
+  <meta property="og:title" content="Valentina Salmon ✦">
+  <meta property="og:description" content="Estudiante avanzada de Ingeniería en Sistemas de Información, apasionada por IA y automatización.">
+  <meta property="og:type" content="website">
+  <title>Valentina Salmon ✦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="cur" aria-hidden="true">
+    <svg viewBox="0 0 16 16" fill="none">
+      <polygon points="8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10 0,6 6,6" fill="#FF2D78"/>
+    </svg>
+  </div>
+  <div id="curt" aria-hidden="true"></div>
+  <div id="bar" role="progressbar" aria-hidden="true"></div>
+
+  <nav role="navigation" aria-label="Menú principal">
+    <div class="logo" aria-label="Valentina Salmon">✦ Valentina</div>
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav-about">Sobre mí</a>
+      <a href="#skills" data-i18n="nav-skills">Skills</a>
+      <a href="#projects" data-i18n="nav-projects">Proyectos</a>
+      <a href="#edu" data-i18n="nav-edu">Educación</a>
+      <a href="#contact" data-i18n="nav-contact">Contacto</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:.6rem">
+      <div class="nav-badge" aria-label="Disponible para trabajar" data-i18n="nav-badge">Disponible</div>
+    <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">🌐</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Presentación">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero-eyebrow">✦ Desarrollo web · IA &amp; Automatización · Corrientes, AR</p>
+      <h1 class="hero-name">
+        <span>Valentina</span>
+        <span class="outline">Salmon</span>
+      </h1>
+      <div class="hero-sub">
+        <p class="hero-desc" data-i18n="hero-desc">
+          Estudiante de Ingeniería en Sistemas de Información, apasionada por
+          <em>inteligencia artificial y automatización</em>. Construyo software con criterio técnico y estético, busco espacios donde pueda desarrollar mi potencial.
+        </p>
+        <div class="hero-tags" role="list" aria-label="Etiquetas">
+          <span class="hero-tag tag-pink"   role="listitem" data-i18n="tag-ia">IA &amp; Automatización</span>
+          <span class="hero-tag tag-blue"   role="listitem" data-i18n="tag-web">Desarrollo web</span>
+          <span class="hero-tag tag-orange" role="listitem" data-i18n="tag-creative">Creatividad</span>
+          <span class="hero-tag tag-lime"   role="listitem" data-i18n="tag-year">5° año UCP</span>
+          <span class="hero-tag tag-purple" role="listitem" data-i18n="tag-city">Corrientes, AR</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="mouse"><div class="mouse-dot"></div></div>
+      <span class="scroll-label" data-i18n="scroll-label">scroll</span>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="section">
+      <span class="section-label reveal" data-i18n="about-label">✦ Sobre mí</span>
+      <div class="about-grid">
+        <div class="about-text reveal from-left">
+          <h2 id="about-title" class="section-title" style="margin-bottom:1.25rem" data-i18n="about-title">
+            Hola, soy <span class="accent">Valen</span> <span class="outline">✦</span>
+          </h2>
+          <blockquote data-i18n="about-quote">"Construyo cosas que se ven tan bien como funcionan."</blockquote>
+          <p data-i18n="about-p1">
+            Soy estudiante avanzada de Ingeniería en Sistemas de Información en la
+            Universidad de la Cuenca del Plata, Corrientes.
+            Me apasiona el cruce entre la tecnología y el diseño, potenciando al máximo mi creatividad.
+          </p>
+          <p data-i18n="about-p2">
+            Lo que más me entusiasma es el futuro:
+            <strong>IA, automatizaciones y sistemas inteligentes</strong>.
+          </p>
+          <div class="chip-group stagger">
+            <span class="chip chip-pink"   data-i18n="chip-ia">IA &amp; Automatización</span>
+            <span class="chip chip-purple" data-i18n="chip-web">Desarrollo web</span>
+            <span class="chip chip-blue"   data-i18n="chip-year">5° año UCP</span>
+            <span class="chip chip-white"  data-i18n="chip-lang">Inglés B1</span>
+            <span class="chip chip-lime"   data-i18n="chip-city">Corrientes</span>
+          </div>
+        </div>
+        <div class="photo-wrap reveal from-right">
+          <div class="photo-box" id="photo-box">
+            <label for="photo-input" style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;gap:.6rem">
+              <span class="photo-placeholder-icon" aria-hidden="true">📷</span>
+              <span class="photo-placeholder-label" data-i18n="photo-label">Tu foto · click para subir</span>
+            </label>
+            <input type="file" id="photo-input" accept="image/*" aria-label="Subir foto de perfil">
+          </div>
+          <div class="photo-sticker" aria-hidden="true" data-i18n="sticker">✦ Disponible</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SKILLS -->
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="section">
+      <span class="section-label reveal" data-i18n="skills-label">✦ Tecnologías</span>
+      <h2 id="skills-title" class="section-title reveal" style="margin-bottom:0" data-i18n="skills-title">
+        El <span class="accent">stack</span> que uso
+      </h2>
+      <div class="skills-row stagger" id="skills-row" role="list" aria-label="Tecnologías"></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SOFT SKILLS -->
+  <section id="soft" aria-labelledby="soft-title">
+    <div class="section">
+      <span class="section-label reveal" data-i18n="soft-label">✦ Más que código</span>
+      <div class="soft-header">
+        <h2 id="soft-title" class="section-title reveal" data-i18n="soft-title">
+          La persona <span class="accent">detrás</span> <span class="outline">del stack</span>
+        </h2>
+        <p class="soft-description reveal" style="transition-delay:.1s" data-i18n="soft-desc">
+          El código lo escribe cualquiera. Lo que lo hace memorable es la persona que lo piensa.
+        </p>
+      </div>
+      <div class="soft-grid stagger">
+        <div class="soft-card span-2 color-pink">
+          <div class="soft-card-icon" id="soft-paint" aria-hidden="true"></div>
+          <div class="soft-card-title" data-i18n="soft-c1-title">Creatividad &amp; diseño</div>
+          <div class="soft-card-desc"  data-i18n="soft-c1-desc">Me apasiona que las cosas se vean tan bien como funcionan.</div>
+          <div class="soft-card-tags">
+            <span class="soft-card-tag" data-i18n="soft-c1-t1">UI/UX thinking</span>
+            <span class="soft-card-tag" data-i18n="soft-c1-t2">Diseño web</span>
+            <span class="soft-card-tag" data-i18n="soft-c1-t3">Detalle visual</span>
+          </div>
+          <div class="soft-card-bg" aria-hidden="true">CREA</div>
+        </div>
+        <div class="soft-card color-purple">
+          <div class="soft-card-icon" id="soft-robot" aria-hidden="true"></div>
+          <div class="soft-card-title" data-i18n="soft-c2-title">IA &amp; futuro</div>
+          <div class="soft-card-desc"  data-i18n="soft-c2-desc">Fascinada por la inteligencia artificial y la automatización.</div>
+          <div class="soft-card-bg" aria-hidden="true">AI</div>
+        </div>
+        <div class="soft-card color-lime">
+          <div class="soft-card-icon" id="soft-wave" aria-hidden="true"></div>
+          <div class="soft-card-title" data-i18n="soft-c3-title">Adaptabilidad</div>
+          <div class="soft-card-desc"  data-i18n="soft-c3-desc">Cada proyecto es un contexto nuevo. Me amoldo rápido.</div>
+        </div>
+        <div class="soft-card color-blue">
+          <div class="soft-card-icon" id="soft-team" aria-hidden="true"></div>
+          <div class="soft-card-title" data-i18n="soft-c4-title">Trabajo en equipo</div>
+          <div class="soft-card-desc"  data-i18n="soft-c4-desc">El mejor código se escribe junto.</div>
+        </div>
+        <div class="soft-card color-yellow">
+          <div class="soft-card-icon" id="soft-puzzle" aria-hidden="true"></div>
+          <div class="soft-card-title" data-i18n="soft-c5-title">Resolución de problemas</div>
+          <div class="soft-card-desc"  data-i18n="soft-c5-desc">Entiendo el problema antes de la primera línea.</div>
+        </div>
+        <div class="soft-card span-2 color-dark">
+          <div class="soft-card-icon" id="soft-book" aria-hidden="true"></div>
+          <div class="soft-card-title" data-i18n="soft-c6-title">Aprendizaje continuo</div>
+          <div class="soft-card-desc"  data-i18n="soft-c6-desc">La tecnología no para — yo tampoco.</div>
+          <div class="soft-card-tags">
+            <span class="soft-card-tag" data-i18n="soft-c6-t1">Curiosidad constante</span>
+            <span class="soft-card-tag" data-i18n="soft-c6-t2">Proyectos propios</span>
+            <span class="soft-card-tag" data-i18n="soft-c6-t3">Comunidad tech</span>
+          </div>
+        </div>
+        <div class="soft-card color-orange">
+          <div class="soft-card-icon" id="soft-chat" aria-hidden="true"></div>
+          <div class="soft-card-title" data-i18n="soft-c7-title">Comunicación</div>
+          <div class="soft-card-desc"  data-i18n="soft-c7-desc">Explicar lo complejo de forma simple.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="section">
+      <span class="section-label reveal" data-i18n="projects-label">✦ Proyectos</span>
+      <h2 id="projects-title" class="section-title reveal" data-i18n="projects-title">Lo que <span class="accent">construí</span></h2>
+      <div class="projects-grid stagger">
+
+        <a href="https://www.neamotos.com/" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Ver proyecto Neamotos">
+          <div class="project-thumb" style="background:#1a0030">
+            <div class="project-thumb-grid" aria-hidden="true"></div>
+            <span class="project-number" aria-hidden="true">01</span>
+          </div>
+          <div class="project-body">
+            <div class="project-chips">
+              <span class="project-chip accent-pink">Full Stack</span>
+              <span class="project-chip">React - Tailwind</span>
+              <span class="project-chip">Supabase</span>
+            </div>
+            <div class="project-title">Neamotos</div>
+            <p class="project-desc" data-i18n="proj1-desc">Plataforma web completa para una concesionaria de motos de Corrientes. Catálogo por marca y modelo, sección de indumentaria, financiación, seguros y contacto por WhatsApp. Diseño responsive con identidad visual propia.</p>
+            <div class="project-footer">
+              <span class="project-chip accent-pink" data-i18n="proj1-badge">Web App · En producción</span>
+              <span class="project-arrow" style="color:var(--pink)" data-i18n="proj1-arrow">Ver proyecto →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/Lucas8276/Isla_Del_Lenguaje" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Ver proyecto La Isla del Lenguaje">
+          <div class="project-thumb" style="background:#001a14">
+            <div class="project-thumb-grid" aria-hidden="true"></div>
+            <span class="project-number" aria-hidden="true">02</span>
+          </div>
+          <div class="project-body">
+            <div class="project-chips">
+              <span class="project-chip accent-green">Educación</span>
+              <span class="project-chip">JavaScript</span>
+              <span class="project-chip">Node.js</span>
+              <span class="project-chip">PostgreSQL</span>
+            </div>
+            <div class="project-title">La Isla del Lenguaje</div>
+            <p class="project-desc" data-i18n="proj2-desc">Aplicación web educativa e interactiva destinada al fortalecimiento de habilidades lingüísticas infantiles. Interfaz dinámica desarrollada con JavaScript, enfocada en la experiencia del usuario y la accesibilidad.</p>
+            <div class="project-footer">
+              <span class="project-chip accent-green" data-i18n="proj2-badge">Ver código</span>
+              <span class="project-arrow" style="color:#FFE500" data-i18n="proj2-arrow">Ver en GitHub →</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="project-soon" aria-label="Próximo proyecto en construcción">
+          <span style="font-size:1.8rem;opacity:.25" aria-hidden="true">✦</span>
+          <div class="project-soon-title" data-i18n="soon-title">Próximo proyecto</div>
+          <div class="project-soon-label" data-i18n="soon-label">En construcción</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- EDUCATION -->
+  <section id="edu" aria-labelledby="edu-title">
+    <div class="section">
+      <span class="section-label reveal" data-i18n="edu-label">✦ Educación</span>
+      <div class="edu-grid">
+        <div class="reveal from-left">
+          <h2 id="edu-title" class="edu-title" data-i18n="edu-title">
+            Ingeniería en Sistemas de <span>Información</span>
+          </h2>
+          <p class="edu-university" data-i18n="edu-uni">Universidad de la Cuenca del Plata</p>
+          <dl>
+            <div class="edu-row">
+              <dt class="edu-label" data-i18n="edu-lbl1">Año actual</dt>
+              <dd class="edu-value highlight" data-i18n="edu-val1">5° año en curso</dd>
+            </div>
+            <div class="edu-row">
+              <dt class="edu-label" data-i18n="edu-lbl2">Período</dt>
+              <dd class="edu-value" data-i18n="edu-val2">2022 — Presente</dd>
+            </div>
+            <div class="edu-row">
+              <dt class="edu-label" data-i18n="edu-lbl3">Sede</dt>
+              <dd class="edu-value" data-i18n="edu-val3">Corrientes, Argentina</dd>
+            </div>
+            <div class="edu-row">
+              <dt class="edu-label" data-i18n="edu-lbl4">Inglés</dt>
+              <dd class="edu-value" data-i18n="edu-val4">Nivel B1</dd>
+            </div>
+            <div class="edu-row">
+              <dt class="edu-label" data-i18n="edu-lbl5">Interés</dt>
+              <dd class="edu-value highlight2" data-i18n="edu-val5">IA &amp; Automatización</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="reveal from-right">
+          <div class="edu-chips stagger">
+            <span class="chip chip-pink"   data-i18n="edu-chip1">⚡ Estudiante avanzada</span>
+            <span class="chip chip-white"  data-i18n="edu-chip2">Desarrolladora Web</span>
+            <span class="chip chip-white"  data-i18n="edu-chip3">Bases de Datos</span>
+            <span class="chip chip-white"  data-i18n="edu-chip4">Ing. de Software</span>
+            <span class="chip chip-purple" data-i18n="edu-chip5">IA &amp; Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="contact-inner">
+      <span class="section-label reveal" data-i18n="contact-label">✦ Contacto</span>
+      <h2 id="contact-title" class="contact-heading reveal scale-in" data-i18n="contact-title">
+        Hagamos algo <span class="accent">increíble</span>
+      </h2>
+      <div class="contact-row">
+        <div>
+          <div class="contact-links">
+            <a href="mailto:valentinasalmon11@gmail.com" class="contact-link" aria-label="Enviar email" data-i18n="btn-email">✉ Email</a>
+            <a href="https://www.linkedin.com/in/valentina-salm%C3%B3n-25979b254/" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-i18n="btn-linkedin">↗ LinkedIn</a>
+            <a href="https://github.com/valentinasalmon" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-i18n="btn-github">↗ GitHub</a>
+            <a href="https://wa.me/5493794338190" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-i18n="btn-wa">💬 WhatsApp</a>
+            <a href="valentina-salmon-cv.pdf" class="contact-link cv" aria-label="Descargar CV" download="Valentina-Salmon-CV.pdf" data-i18n="btn-cv">↓ Descargar CV</a>
+            <a href="https://drive.google.com/file/d/TU_ID_AQUI/view" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Ver video de presentación" data-i18n="btn-video">▶ Video de presentación</a>
+          </div>
+          <p class="contact-meta" data-i18n="contact-meta">Corrientes, AR · Marzo 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Valentina Salmon</span>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
