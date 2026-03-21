@@ -97,7 +97,7 @@ const ICONS = {
     { name: 'CSS',        icon: ICONS.css,        accent: '#CC80FF', hover: '#1a0030' },
     { name: 'Tailwind',   icon: ICONS.tailwind,   accent: '#38BDF8', hover: '#001820' },
     { name: 'MySQL',      icon: ICONS.mysql,      accent: '#FF6B00', hover: '#1a0a00' },
-    { name: 'Node.js',    icon: ICONS.node,       accent: '#6DBF67', hover: '#0a1f09' },
+    { name: 'Next.js',    icon: ICONS.node,       accent: '#6DBF67', hover: '#0a1f09' },
     { name: 'Supabase',   icon: ICONS.supabase,   accent: '#3ECF8E', hover: '#001a0e' },
     { name: 'MongoDB',    icon: ICONS.mongo,      accent: '#00C896', hover: '#001a12' },
   ];
