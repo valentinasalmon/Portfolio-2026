@@ -713,7 +713,6 @@ nav {
   background-size: 28px 28px;
 }
 
-/* gradiente sutil que no tapa el fondo pero da profundidad */
 .project-thumb::after {
   content: '';
   position: absolute;
@@ -952,7 +951,6 @@ footer {
   to   { opacity: 1; transform: none; }
 }
 
-/* Scroll-triggered reveal */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -964,7 +962,6 @@ footer {
 .reveal.scale-in   { transform: scale(.94); }
 .reveal.visible    { opacity: 1 !important; transform: none !important; }
 
-/* Staggered children */
 .stagger > * {
   opacity: 0;
   transform: translateY(22px);
@@ -1012,7 +1009,7 @@ footer {
   footer { font-size: .9rem; }
   #contact { padding: 2.5rem 1.25rem 2rem; }
 
-  /* Hero: centrado sin espacio muerto */
+  /* Hero */
   #hero { height: 100dvh; min-height: -webkit-fill-available; padding: 5rem 1.25rem 1.75rem; justify-content: center; }
   .hero-content { padding-top: 0; width: 100%; }
   .hero-eyebrow { font-size: .55rem; letter-spacing: .12em; }
@@ -1021,14 +1018,16 @@ footer {
   .hero-tags  { justify-content: flex-start; }
   .hero-desc  { font-size: .9rem; color: rgba(255, 255, 255, .85); max-width: 100%; }
 
-  /* About: foto como banner */
-  .about-grid  { gap: 0; display: flex; flex-direction: column; }
-  .photo-wrap  { order: -1; width: 100%; margin-bottom: 1.5rem; }
-  .photo-box   { width: 100%; height: 160px; border-radius: var(--radius-md); box-shadow: 3px 3px 0 var(--ink); }
-  .photo-img   { border-radius: calc(var(--radius-md) - 2px); }
-  .photo-sticker { top: -.4rem; right: .5rem; font-size: .56rem; padding: .35rem .75rem; }
+  /* About: foto circular centrada */
+  .about-grid  { gap: 1.5rem; display: flex; flex-direction: column; align-items: center; }
+  .photo-wrap  { order: -1; width: 100%; display: flex; justify-content: center; margin-bottom: 0; }
+  .photo-box   { width: 160px; height: 160px; border-radius: 50%; box-shadow: 3px 3px 0 var(--ink); }
+  .photo-img   { border-radius: 50%; }
+  .photo-sticker { top: -.4rem; right: -.4rem; font-size: .56rem; padding: .35rem .75rem; }
+  .about-text  { width: 100%; }
   .about-text blockquote { font-size: 1rem; }
   .about-text p { color: #000; font-size: .95rem; }
+  #about .section-title { font-size: clamp(1.8rem, 9vw, 3rem); }
 
   /* Skills: 2 col */
   .skills-row { flex-wrap: wrap; border-radius: var(--radius-sm); }
@@ -1060,14 +1059,14 @@ footer {
   .contact-links   { flex-direction: column; align-items: stretch; }
   .contact-link    { justify-content: center; }
 
-  /* Section labels - ensure contrast */
+  /* Section labels */
   .section-label { font-size: .65rem; }
   #skills  .section-label { color: var(--lime)   !important; border-color: var(--lime)   !important; }
   #contact .section-label { color: var(--lime)   !important; border-color: var(--lime)   !important; }
   #projects .section-label { color: var(--orange) !important; border-color: var(--orange) !important; }
   #soft    .section-label { color: #3d5200 !important; }
 
-  /* Projects on dark bg */
+  /* Projects */
   .project-desc  { color: rgba(255, 255, 255, .85); font-size: .88rem; }
   .project-title { font-size: 1.3rem; }
 }
