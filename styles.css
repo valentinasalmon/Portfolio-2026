@@ -1018,16 +1018,16 @@ footer {
   .hero-tags  { justify-content: flex-start; }
   .hero-desc  { font-size: .9rem; color: rgba(255, 255, 255, .85); max-width: 100%; }
 
-  /* About: foto circular centrada */
-  .about-grid  { gap: 1.5rem; display: flex; flex-direction: column; align-items: center; }
-  .photo-wrap  { order: -1; width: 100%; display: flex; justify-content: center; margin-bottom: 0; }
-  .photo-box   { width: 160px; height: 160px; border-radius: 50%; box-shadow: 3px 3px 0 var(--ink); }
-  .photo-img   { border-radius: 50%; }
-  .photo-sticker { top: -.4rem; right: -.4rem; font-size: .56rem; padding: .35rem .75rem; }
-  .about-text  { width: 100%; }
-  .about-text blockquote { font-size: 1rem; }
-  .about-text p { color: #000; font-size: .95rem; }
-  #about .section-title { font-size: clamp(1.8rem, 9vw, 3rem); }
+/* About: foto circular centrada */
+.about-grid  { gap: 1rem; display: flex; flex-direction: column; align-items: center; }
+.photo-wrap  { order: -1; position: relative; display: flex; justify-content: center; margin-bottom: 0; }
+.photo-box   { width: 200px; height: 200px; border-radius: 50%; box-shadow: 3px 3px 0 var(--ink); }
+.photo-img   { border-radius: 50%; }
+.photo-sticker { top: 0; left: 50%; transform: translateX(-50%) rotate(8deg); right: auto; font-size: .56rem; padding: .35rem .75rem; }
+.about-text  { width: 100%; }
+.about-text blockquote { font-size: 1rem; }
+.about-text p { color: #000; font-size: .95rem; }
+#about .section-title { font-size: clamp(1.8rem, 9vw, 3rem); }
 
   /* Skills: 2 col */
   .skills-row { flex-wrap: wrap; border-radius: var(--radius-sm); }
